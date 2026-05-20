@@ -9,11 +9,14 @@ we are doing is that instead of returning the mid we are returning the start ele
 public class CelingOfANumber {
     public static void main(String[] args) {
         int[] arr = {10,20,30,40,50};
-        int target = 50;
+        int target = 60;
         int ans = celing(arr,target);
         System.out.println("Celing of a number :-  " + ans);
     }
     public static int celing(int[] arr,int target){
+        if(target > arr[arr.length - 1 ]){
+            return - 1;
+        }
         int start = 0;
         int end = arr.length -1;
         while(start <= end) {
